@@ -1,0 +1,62 @@
+
+body {
+    background-color: black;
+}
+
+.navbar {
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    padding: 10px 20px;
+}
+
+.navbar-title {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-links {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar-links li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar-links li a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    background: url('images/minecraft-block.png') no-repeat center center;
+    background-size: 200px;
+    text-align: center;
+    color: white;
+    padding: 100px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none; /* Remove the underline */
+    color: #007bff; /* Default link color */
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+}
+
+.hero:hover {
+    background: url('images/minecraft-block.png') no-repeat center center;
+    background-size: 300px;
+}
+
