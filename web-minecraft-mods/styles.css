@@ -60,3 +60,23 @@ body {
     background-size: 300px;
 }
 
+.hero a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    width: 70px;  /* Set the size of the logo */
+    height: auto;
+    margin-right: 1px;  /* Space between the logo and the title */
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
