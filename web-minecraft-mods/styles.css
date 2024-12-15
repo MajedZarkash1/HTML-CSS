@@ -1,6 +1,6 @@
 
 body {
-    background-color: black;
+    background-image: url(images/background.webp);
 }
 
 .navbar {
@@ -79,4 +79,21 @@ body {
 .navbar-logo {
     display: flex;
     align-items: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+td {
+    padding: 5px;
+}
+
+.poster {
+    justify-content: center;
+    width: 250px;
+    height: 350px;
+    border: 2px solid #ddd;
 }
