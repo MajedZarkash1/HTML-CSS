@@ -1,0 +1,90 @@
+.Title
+{
+    text-align: center;
+    font-family: cursive; /*the main font*/
+    padding: 1%;
+    font-weight: bold;
+    font-size: 50px;
+}
+.navbar
+{
+    overflow: hidden;
+    position: fixed;
+    top: 0%; /*put it above on the very top*/
+    width: 100%; /*full width*/
+    font-family: cursive;
+    background-color: black;
+}
+.navbar a
+{
+    float: left;
+    display: block;
+    color: aliceblue;
+    padding: 14px 15px;
+    text-decoration: none;
+}
+
+.navbar a:hover
+{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    background: white;
+}
+.parallelogram
+{
+    width: 458px;
+    height: 250px;
+    transform: skew(10deg);/*to make it parallelogram*/    position: relative;
+    border: 3px solid #000000;
+    margin-left: auto;
+    margin-right: auto;
+}
+.button1
+{
+    width: 150px;
+    height: 250px;
+    background-color: #000000;
+}
+.button1:hover
+{
+    background-color: aliceblue;
+}
+.button2
+{
+    width: 150px;
+    height: 250px;
+    background-color: #000000;
+}
+.button2:hover
+{
+    background-color: aliceblue;
+
+}
+.button3
+{
+    width: 150px;
+    height: 250px;
+    background-color: #000000;
+}
+.button3:hover
+{
+    background-color: aliceblue;
+}
+
+.square
+{
+    width: 800px;
+    height: 500px;
+    border: 3px solid #000000 ;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+.square:hover
+{
+    background-color: black;
+}
+.table
+{
+    border: 2px #000000;
+}
