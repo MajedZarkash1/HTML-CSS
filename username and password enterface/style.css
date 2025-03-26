@@ -2,9 +2,9 @@
 {
     text-align: center;
     font-family: cursive; /*the main font*/
-    padding: 1%;
+    padding: 8%;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 90px;
 }
 .navbar
 {
@@ -14,6 +14,8 @@
     width: 100%; /*full width*/
     font-family: cursive;
     background-color: black;
+    z-index: 100; /*ensure it is above everything*/
+
 }
 .navbar a
 {
@@ -22,6 +24,7 @@
     color: aliceblue;
     padding: 14px 15px;
     text-decoration: none;
+
 }
 
 .navbar a:hover
@@ -29,6 +32,14 @@
     color: rgb(0, 0, 0);
     font-weight: bold;
     background: white;
+}
+.navbar h1
+{
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 0px;
 }
 .parallelogram
 {
@@ -44,6 +55,7 @@
     width: 150px;
     height: 250px;
     background-color: #000000;
+    z-index: 1;
 }
 .button1:hover
 {
@@ -54,6 +66,7 @@
     width: 150px;
     height: 250px;
     background-color: #000000;
+    z-index: 1;
 }
 .button2:hover
 {
@@ -65,6 +78,7 @@
     width: 150px;
     height: 250px;
     background-color: #000000;
+    z-index: 1;
 }
 .button3:hover
 {
@@ -75,16 +89,27 @@
 {
     width: 800px;
     height: 500px;
-    border: 3px solid #000000 ;
+    border: 3px solid #1e0000 ;
     margin-left: auto;
     margin-right: auto;
     margin-top: 40px;
+    background-color: #000000;
 }
 .square:hover
 {
-    background-color: black;
+    background-color: rgb(18, 0, 0);
 }
-.table
+.menu 
 {
-    border: 2px #000000;
+    padding-left: 35px;
+    color: white;
+    font-family: cursive;
+}
+.menu h1:hover
+{
+    color: rgb(187, 187, 187);
+}
+.menu h2:hover
+{
+    color: rgb(178, 178, 178);
 }
