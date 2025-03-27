@@ -128,3 +128,17 @@
 {
     font-family: cursive;
 }
+.maps
+{
+    text-align: center;
+    margin-top: 50px;
+}
+.maps h1
+{
+    font-family: cursive;
+
+}
+.map-square
+{
+    border: 10px solid black;
+}
