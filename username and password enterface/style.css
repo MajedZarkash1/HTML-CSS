@@ -2,7 +2,7 @@
 {
     text-align: center;
     font-family: cursive; /*the main font*/
-    padding: 8%;
+    margin-top: 100px;
     font-weight: bold;
     font-size: 90px;
 }
@@ -112,4 +112,19 @@
 .menu h2:hover
 {
     color: rgb(178, 178, 178);
+}
+.search
+{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.search input 
+{
+    height: 15px;
+    width: 250px;
+    margin-left: 15px;
+}
+.search-h2
+{
+    font-family: cursive;
 }
