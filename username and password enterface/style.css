@@ -1,144 +1,141 @@
-.Title
-{
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Title */
+.Title {
     text-align: center;
-    font-family: cursive; /*the main font*/
+    font-family: cursive;
     margin-top: 100px;
     font-weight: bold;
-    font-size: 90px;
+    font-size: 60px;
+    color: #333;
 }
-.navbar
-{
-    overflow: hidden;
+
+/* Navbar */
+.navbar {
     position: fixed;
-    top: 0%; /*put it above on the very top*/
-    width: 100%; /*full width*/
-    font-family: cursive;
+    top: 0;
+    width: 100%;
     background-color: black;
-    z-index: 100; /*ensure it is above everything*/
-
-}
-.navbar a
-{
-    float: left;
-    display: block;
-    color: aliceblue;
-    padding: 14px 15px;
-    text-decoration: none;
-
-}
-
-.navbar a:hover
-{
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    background: white;
-}
-.navbar h1
-{
-    color: white;
-    justify-content: center;
-    align-items: center;
+    padding: 15px 0;
     display: flex;
-    height: 0px;
-}
-.parallelogram
-{
-    width: 458px;
-    height: 250px;
-    transform: skew(10deg);/*to make it parallelogram*/    position: relative;
-    border: 3px solid #000000;
-    margin-left: auto;
-    margin-right: auto;
-}
-.button1
-{
-    width: 150px;
-    height: 250px;
-    background-color: #000000;
-    z-index: 1;
-}
-.button1:hover
-{
-    background-color: aliceblue;
-}
-.button2
-{
-    width: 150px;
-    height: 250px;
-    background-color: #000000;
-    z-index: 1;
-}
-.button2:hover
-{
-    background-color: aliceblue;
-
-}
-.button3
-{
-    width: 150px;
-    height: 250px;
-    background-color: #000000;
-    z-index: 1;
-}
-.button3:hover
-{
-    background-color: aliceblue;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
 }
 
-.square
-{
-    width: 800px;
-    height: 500px;
-    border: 3px solid #1e0000 ;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 40px;
-    background-color: #000000;
-}
-.square:hover
-{
-    background-color: rgb(18, 0, 0);
-}
-.menu 
-{
-    padding-left: 35px;
+.navbar .site-name {
     color: white;
-    font-family: cursive;
+    margin-left: 20px;
+    font-size: 24px;
 }
-.menu h1:hover
-{
-    color: rgb(187, 187, 187);
+
+.navbar nav {
+    margin-right: 20px;
 }
-.menu h2:hover
-{
-    color: rgb(178, 178, 178);
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: 0.3s;
 }
-.search
-{
+
+.navbar a:hover {
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+}
+
+/* Search */
+.search {
     text-align: center;
-    margin-bottom: 50px;
+    margin: 100px 0 30px;
 }
-.search input 
-{
-    height: 15px;
+
+.search input {
     width: 250px;
-    margin-left: 15px;
+    padding: 8px;
+    border: 2px solid black;
+    border-radius: 5px;
 }
-.search-h2
-{
-    font-family: cursive;
+
+/* Parallelogram Buttons */
+.parallelogram {
+    width: 450px;
+    height: 200px;
+    transform: skew(10deg);
+    border: 3px solid black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px auto;
 }
-.maps
-{
+
+.parallelogram button {
+    width: 120px;
+    height: 200px;
+    background-color: black;
+    border: none;
+    transition: 0.3s;
+}
+
+.parallelogram button:hover {
+    background-color: white;
+    border: 2px solid black;
+}
+
+/* Menu */
+.menu-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.square {
+    width: 600px;
+    padding: 20px;
+    background-color: black;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.square h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    font-size: 20px;
+    padding: 5px 0;
+    transition: 0.3s;
+}
+
+.menu li:hover {
+    color: gray;
+}
+
+/* Maps */
+.maps {
     text-align: center;
     margin-top: 50px;
 }
-.maps h1
-{
-    font-family: cursive;
 
-}
-.map-square
-{
+.map-square {
+    padding: 10px;
     border: 10px solid black;
+    display: inline-block;
+    border-radius: 10px;
 }
