@@ -52,19 +52,6 @@ body {
     border-radius: 5px;
 }
 
-/* Search */
-.search {
-    text-align: center;
-    margin: 100px 0 30px;
-}
-
-.search input {
-    width: 250px;
-    padding: 8px;
-    border: 2px solid black;
-    border-radius: 5px;
-}
-
 /* Parallelogram Buttons */
 .parallelogram {
     width: 450px;
@@ -143,4 +130,11 @@ body {
 {
     font-family: cursive;
     text-align: center;
+}
+.menu-specials
+{
+    list-style: none;
+    padding: 0%;
+    font-size: 50px;
+    font-family: cursive;
 }
