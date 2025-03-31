@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Image Slider</title>
+    <style>
+        /* Center the slider */
+        .slider-container {
+            width: 300px;
+            margin: 50px auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Slide area */
+        .slider {
+            display: flex;
+            width: 300%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Each image slide */
+        .slide {
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        .slide img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Hide radio buttons */
+        input {
+            display: none;
+        }
+
+        /* Arrows */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 50%;
+        }
+
+        .prev { left: 10px; }
+        .next { right: 10px; }
+
+        /* Slider Logic */
+        #slide1:checked ~ .slider { transform: translateX(0%); }
+        #slide2:checked ~ .slider { transform: translateX(-100%); }
+        #slide3:checked ~ .slider { transform: translateX(-200%); }
+
+    </style>
+</head>
+<body>
+
+    <div class="slider-container">
+        <!-- Radio Buttons -->
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+
+        <!-- Slider -->
+        <div class="slider">
+            <div class="slide"><img src="image1.png" alt="Image 1"></div>
+            <div class="slide"><img src="image2.png" alt="Image 2"></div>
+            <div class="slide"><img src="image3.jpg" alt="Image 3"></div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <label for="slide1" class="prev">❮</label>
+        <label for="slide2" class="next">❯</label>
+        <label for="slide2" class="prev">❮</label>
+        <label for="slide3" class="next">❯</label>
+        <label for="slide3" class="prev">❮</label>
+        <label for="slide1" class="next">❯</label>
+    </div>
+
+</body>
+</html>
