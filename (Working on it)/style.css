@@ -49,11 +49,15 @@ body {
 }
 .content
 {
-    margin-right: auto;
-    margin-left: auto;
-    width: 500px;
-    height: 500px;
+    margin: 0 auto;
+    max-width: 810px;
+    width: 90%;
+    height: auto;
     background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .content h1
 {
@@ -66,26 +70,37 @@ body {
 .list
 {
     color: #ffffff;
-    border: 1px solid white;
+    /*border: 1px solid white;*/
 }
 .list th
 {
-    border: 1px solid white;
+    /*border: 1px solid white;*/
 }
 .list td
 {
-    border: 1px solid white;
+    /*border: 1px solid white;*/
     padding: 100px;
 }
 .list td img
 {
-    max-width: 45px;
-    max-height: 100px;
-    width: auto;
+    margin: 0 auto;
+    max-width: 810px;
+    width: 90%;
     height: auto;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
 }
 .list td img:hover
 {
     background-color: #ffffff;
     border-radius: 10px;
+}
+.list tr th
+{
+    padding-top: 20px;
+    font-size: 40px;
 }
