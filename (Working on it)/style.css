@@ -6,14 +6,12 @@ body {
 }
 
 /* Title */
-.Title {
+.title {
+    margin-top: 120px;
     text-align: center;
-    font-family: cursive;
-    margin-top: 100px;
-    font-weight: bold;
-    font-size: 60px;
-    color: #ffffff;
-    margin-top: 10px;
+    font-family: fantasy;
+    color: white;
+    font-weight: 100;
 }
 
 /* Navbar */
@@ -31,4 +29,63 @@ body {
 .navbar h1
 {
     color: #ffffff;
+    font-family: fantasy;
+    margin-left: 30px;
+    font-weight: 100;
+}
+.navbar a 
+{
+    font-family: fantasy;
+    padding: 9px;
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    margin-right: 10px;
+}
+.navbar a:hover
+{
+    color: gray;
+    font-size: 21px;
+}
+.content
+{
+    margin-right: auto;
+    margin-left: auto;
+    width: 500px;
+    height: 500px;
+    background-color: black;
+}
+.content h1
+{
+    text-align: center;
+    color: #ffffff;
+    font-family: fantasy;
+    font-weight: 50;
+    padding-top: 15px;
+}
+.list
+{
+    color: #ffffff;
+    border: 1px solid white;
+}
+.list th
+{
+    border: 1px solid white;
+}
+.list td
+{
+    border: 1px solid white;
+    padding: 100px;
+}
+.list td img
+{
+    max-width: 45px;
+    max-height: 100px;
+    width: auto;
+    height: auto;
+}
+.list td img:hover
+{
+    background-color: #ffffff;
+    border-radius: 10px;
 }
