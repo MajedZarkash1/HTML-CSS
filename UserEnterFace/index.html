@@ -6,11 +6,14 @@
         <title>portfolio</title>
     </head>
     <body>
+
+        <div class="navbar">
         <nav>
-            <a href="###">Home</a>
             <a href="###">Contact</a>
-            <a href="###">Social Media</a>
+            <a href="###">Home</a>
+            <a href="###">Media</a>
         </nav>
+        </div>
         
         <div class="background">
 
@@ -19,17 +22,29 @@
         <img src="image.png" alt="Majed's Photo"/>
 
         <div class="education">
+
         <h2>Education History</h2>
         <p>Certificate III Information Technology</p>
         <p>Certifficate IV cyber Security</p>
+        
         </div>
+
+        <div class="contact">
+
         <h2>Contacts Details</h2>
         <p>Moblie Number: *********</p>
         <p>Email Address: majedzarkash@gmail.com</p>
+        
+        </div>
+
+        <div class="social">
 
         <h2>Social Media</h2>
         <p>Instagram: Magd_Glory_1</p>
         <p>Discord: majedGlory_</p>
+
+        </div>
+
 
         </div>
 
@@ -38,20 +53,65 @@
     <style>
         body
         {
-            background-color: whitesmoke;
+            background-color: rgb(0, 0, 0);
         }
         .background
         {
-            background-color: rgb(149, 149, 149);
+            margin-top: 100px;
+            background-color: rgb(49, 49, 49);
+        }
+        .background img
+        {
+            border-radius: 100%;
         }
         .education
         {
-            background-color: aqua;
+            background-color: rgb(126, 126, 126);
+        }
+        .contact
+        {
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+        .contact h1
+        {
+            color: white;
+        }
+        .social
+        {
+            background-color: rgb(126, 126, 126);
         }
         h1, h2
         {
             font-weight: bold;
             font-family: 'Courier New', Courier, monospace;
+        }
+        .navbar 
+        {
+            padding-top: 20px;
+            height: 50px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+
+            display: flex;
+            justify-content: center;
+
+            background-color: rgb(126, 126, 126);
+            border-bottom: 3px solid rgb(255, 255, 255);
+        }
+        .navbar a
+        {
+            padding: 40px;
+            text-decoration: none;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .navbar a:hover
+        {
+            color: black;
         }
     </style>
 
