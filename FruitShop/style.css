@@ -81,7 +81,7 @@ body {
 .fruits table img {
     margin: 10px 150px;
     width: 200px;
-    height: 220px;
+    height: 200px;
 }
 
 .fruits table th {
@@ -134,3 +134,24 @@ body {
     font-family: cursive;
     font-size: 10px;
 }
+
+@media only screen and (max-width: 600px)
+{
+    .fruits table img 
+    {
+        margin: 50px 46px;
+        width: 100px;
+        height: 150px;
+    }
+}
+
+@media only screen and (max-width: 500px)
+{
+    .fruits table img 
+    {
+        margin: 50px 10px;
+        width: 100px;
+        height: 150px;
+    }
+}
+
