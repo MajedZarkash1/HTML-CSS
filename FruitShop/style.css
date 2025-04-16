@@ -3,32 +3,57 @@
 body
 {
     background-color: #FCC981;
+    margin: 0;
+    padding: 0;
 }
 .navbar
 {
     top: 0;
     left: 0;
     width: 100%;
-    height: 50px;
+    height: 60px;
     position: fixed;
     background-color: #FDB44E;
     border-bottom: white solid 1px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .navbar-text
 {
     display: flex;
     justify-content: center;
+    gap: 45px;
     /*this to make the logo and the options even*/
     align-items: center;
+    font-family: cursive;  
 }
 
+.navbar-text a 
+{
+    text-decoration: none;
+    color: white;
+}
+.navbar-text a:hover
+{
+    transition: .2s;
+    color: black;
+    background-color: #228b22;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.navbar-text p
+{
+    font-size: large;
+    width: 110px;
+    font-family: "Lobster", sans-serif;
+}
 
 .title
 {
-    margin-top: 200px;
+    margin-top: 150px;
     display: flex;
     justify-content: center;
-    margin-right: 100px;
+    margin-right: 80px;
 }
 .title table img
 {
@@ -36,6 +61,7 @@ body
 }
 .title table h1
 {
+    border-bottom: black solid 1px;
     font-family: "Lobster", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -46,3 +72,22 @@ body
     font-weight: 400;
     font-style: normal;
 }
+.fruits
+{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 100vw;
+    height: 300px;
+    background-color: #FDB44E;
+    margin-top: 60px;
+    padding-top: 100px;
+}
+.fruits table img
+{
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 10px;
+    width: 200px;
+    height: 220px;
+}
+
+
