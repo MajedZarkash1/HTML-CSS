@@ -154,4 +154,55 @@ body {
         height: 150px;
     }
 }
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .navbar-text {
+        gap: 20px;
+        font-size: 14px;
+    }
 
+    .title h1 {
+        font-size: 24px;
+    }
+
+    .title h2 {
+        font-size: 18px;
+    }
+
+    .fruits th {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .navbar {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .navbar-text {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .fruits img {
+        max-width: 120px;
+    }
+
+    .drink img {
+        max-width: 90%;
+    }
+
+    .footer img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .title h1, .title h2 {
+        font-size: 20px;
+    }
+
+    .title {
+        margin-top: 120px;
+    }
+}
