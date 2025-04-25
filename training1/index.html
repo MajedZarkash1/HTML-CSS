@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio</title>
+    <style>
+        body {
+            background: #000015;
+            margin: 0;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            font-size: 20px;
+        }
+        .logo {
+            color: white;
+            margin-right: auto;
+        }
+        .links {
+            display: flex;
+            gap: 50px;
+        }
+        .links a {
+            color: white;
+            text-decoration: none;
+        }
+        .links a:hover {
+            border-bottom: 2px solid white;
+        }
+        .majed{
+            color: white;
+            margin-top: 0;
+            display: inline;
+            border-bottom: 3px solid white;
+        }
+        .guy{
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            z-index: 1;
+        }
+        .guy img{
+            width: auto;
+            height: auto;
+        }
+        .orange{
+            margin-top: 10px;
+            position: fixed;
+            z-index: 0;
+        }
+        .orange img{
+            width: 500px;
+            height: 250px;
+        }
+        .orange h1{
+            color: white;
+        }
+        @media only screen and (max-width: 600px){
+            .guy{
+                left: 10%;
+            }
+            .navbar{
+                font-size: 15px;
+            }
+            .orange img{
+                width: 400px;
+                height: 200px;
+            }
+        }
+        @media only screen and (min-width: 1200px){
+            .guy img{
+                width: 700px;
+                height: 500px;
+            }
+            .majed{
+                font-size: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><h1>Logo</h1></div>
+        <div class="links">
+            <a href="#">Home</a>
+            <a href="#">Contact</a>
+            <a href="#">Details</a>
+        </div>
+    </nav>
+
+    <div style="text-align: center;">
+        <h1 class="majed">Majed's Portfolio</h1>
+    </div>
+
+    <div class="guy">
+        <img src="images/guy.png"/>
+    </div>
+
+    <div class="orange">
+        <h1>Orange Website</h1>
+        <img src="images/orange.png"/>
+    </div>
+
+
+
+</body>
+</html>
