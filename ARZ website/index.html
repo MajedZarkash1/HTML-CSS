@@ -1,244 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARZ Painting</title>
-    <style>
-        body {
-            background-color: white;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        .navbar nav {
-            background-color: aliceblue;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: fixed;
-            top: 0;
-            right: 0;
-            left: 0;
-            height: 100px;
-            padding: 0 50px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: height 0.3s ease; /* Smooth transition */
-        }
-
-        .navbar nav h1 {
-            margin: 0;
-            font-size: 2rem;
-            color: #333;
-        }
-
-        .navbar nav ul {
-            display: flex;
-            list-style: none;
-            gap: 40px; /* Add space between links */
-            margin: 0;
-            padding: 0;
-            align-items: center;
-        }
-
-        .navbar nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-        .navbar nav ul li a:hover {
-            color: steelblue;
-        }
-
-        .navbar nav button {
-            margin-left: 30px;
-            padding: 8px 16px;
-            background-color: steelblue;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .navbar nav button:hover {
-            background-color: dodgerblue;
-        }
-
-        .main-img img {
-            width: 100%;
-            height: 750px;
-            margin-top: 100px; /* matches navbar height */
-        }
-
-        @media (min-width: 741px) {
-        .menu-toggle {
-            display: none; /* Hide the menu toggle on larger screens */
-        }
-        .main-img img{
-            height: 650px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARZ Painting</title>
+  <style>
+    /* Base Styles */
+    html {
+      scroll-behavior: smooth;
     }
 
-        @media (max-width: 740px) {
-            .main-img img {
-                width: 100%;
-                height: auto;
-                margin-top: 100px; /* matches navbar height */
-            }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: white;
+    }
 
-            .navbar nav ul {
-                display: none; /* Initially hidden */
-                flex-direction: column; /* Stack the items vertically */
-                width: 100%; /* Make the ul take the full width */
-                margin-top: 20px; /* Add space below the navbar */
-                background-color: aliceblue; /* Match navbar color */
-                padding: 20px 0; /* Padding around links */
-            }
+    /* Navbar */
+    .navbar nav {
+      background-color: aliceblue;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100px;
+      padding: 0 50px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: height 0.3s ease;
+      max-width: 1500px;
+      margin: 0 auto;
+    }
 
-            .navbar nav ul li {
-                text-align: center; /* Center-align links */
-                width: 100%; /* Make the li take full width */
-            }
+    .navbar nav img {
+      width: 75px;
+    }
 
-            .navbar nav ul li a {
-                padding: 15px 0; /* Add space around the links */
-                display: block; /* Make the links block-level */
-                font-size: 1.2rem; /* Increase the font size */
-                color: #333;
-                transition: background-color 0.3s ease; /* Smooth background change */
-            }
+    .navbar nav h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #333;
+    }
 
-            .navbar nav ul li a:hover {
-                background-color: steelblue; /* Add hover effect */
-                color: white; /* Change text color on hover */
-            }
+    .navbar nav ul {
+      display: flex;
+      list-style: none;
+      gap: 40px;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+    }
 
-            .menu-toggle {
-                display: block;
-                font-size: 2rem;
-                cursor: pointer;
-                color: #333;
-            }
+    .navbar nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      border-bottom: 1px solid white;
+    }
 
-            .navbar.open nav ul {
-                display: block; /* Show when the navbar is opened */
-            }
+    .navbar nav ul li a:hover {
+      color: steelblue;
+    }
 
-            .navbar.open nav {
-                height: 250px; /* Increased height for open navbar */
-            }
-            .news {
-            width: 95%; /* Make it responsive */
-            max-width: 800px; /* Optional: Set a max width */
-            height: auto; /* Let content decide height */
-            background-color: aliceblue;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 5px auto; /* Center the box */
-            border-radius: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            padding: 3px;
-            text-align: center;
-            }
-            .text img{
-            border-radius: 10%;
-            width: 200px;
-            }
-        }
-        .news{
-            width: auto;
-            height: 600px;
-            background-color: aliceblue;
-            justify-content: center;
-            align-items: center;
-            margin-left: 50%;
-            margin-right: auto;
-            border-radius: 5%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .news {
-            width: 95%; /* Make it responsive */
-            max-width: 1500px; /* Optional: Set a max width */
-            height: auto; /* Let content decide height */
-            background-color: aliceblue;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 5px auto; /* Center the box */
-            border-radius: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            padding: 3px;
-            text-align: center;
-        }
-        .news img {
-            width: 100%;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
+    .menu-toggle {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: #333;
+    }
 
-        .news h3 {
-            font-family: Arial, sans-serif;
-            font-size: 1.5rem;
-            color: #333;
-        }
-        .text ul {
-            display: flex;
-            align-items: center;
-            margin-right: auto;
-            margin-left: auto;
-        }
-        .text ul li{
-            display: flex;
-            text-decoration: none;
-        }
-        .text img{
-            border-radius: 10%;
-            min-width: 300px;
-            max-width: 500px;
-        }
-    </style>
+    /* Top Buttons */
+    .top-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px;
+      background-color: rgb(141, 172, 206);
+      position: fixed;
+      top: 100px;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      flex-wrap: wrap;
+      max-width: 1560px;
+      margin: 0 auto;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .call-btn,
+    .email-btn {
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .call-btn {
+      background-color: white;
+      color: black;
+      border: 2px solid black;
+    }
+
+    .call-btn:hover {
+      background-color: #f0f0f0;
+    }
+
+    .email-btn {
+      background-color: orange;
+      color: white;
+      border: none;
+    }
+
+    .email-btn:hover {
+      background-color: darkorange;
+    }
+
+    .top-buttons p {
+      font-size: large;
+      font-weight: bold;
+    }
+
+    /* Main Image Section */
+    .main-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 170px;
+    }
+
+    .main-img img {
+      max-width: 100%;
+      height: 750px;
+      object-fit: cover;
+    }
+
+    /* Services Section */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .service-card img:hover {
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-card h3 {
+      margin: 15px 0 10px;
+      font-size: 1.2rem;
+      color: #003366;
+    }
+
+    .service-card p {
+      color: #666;
+    }
+
+    .service-card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: orange;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .service-card a:hover {
+      text-decoration: underline;
+    }
+
+    /* About Us */
+    .about-us {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .about-us h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #003366;
+    }
+
+    .about-us p {
+      font-size: 1.1rem;
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: rgb(141, 172, 206);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: orange;
+      text-decoration: none;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 940px) {
+      .main-img img {
+        height: auto;
+      }
+
+      .navbar nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: aliceblue;
+        padding: 20px 0;
+        margin-top: 20px;
+      }
+
+      .navbar nav ul li {
+        width: 100%;
+        text-align: center;
+      }
+
+      .navbar nav ul li a {
+        display: block;
+        padding: 15px 0;
+        font-size: 1.2rem;
+        transition: background-color 0.3s ease;
+      }
+
+      .navbar nav ul li a:hover {
+        background-color: steelblue;
+        color: white;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .navbar.open nav ul {
+        display: block;
+      }
+
+      .navbar.open nav {
+        height: 250px;
+      }
+
+      .navbar.open + .top-buttons {
+        top: 250px;
+        transition: height 0.3s ease;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <nav>
+      <img src="logo.png" alt="Logo" />
+      <div class="menu-toggle">☰</div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+      </ul>
+    </nav>
+  </div>
 
-    <div class="navbar">
-        <nav>
-            <h1>ARZ Painting</h1>
-            <div class="menu-toggle">☰</div> <!-- This shows on small screens -->
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><button>Get Started</button></li>
-            </ul>
-        </nav>
+  <!-- Top Buttons -->
+  <div class="top-buttons">
+    <a href="tel:0416834200" class="call-btn">📞 0459 249 457</a>
+    <a href="mailto:majedzarkash@gmail.com" class="email-btn">Email Us</a>
+    <p>Call now!</p>
+  </div>
+
+  <!-- Main Image -->
+  <div class="main-img" id="home">
+    <img src="main.webp" alt="Painting work by ARZ Painting" />
+  </div>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <div class="service-card">
+      <img src="main.jpg" alt="Residential Painting" />
+      <h3>Residential Painting</h3>
+      <p>Offering outstanding…</p>
+      <a href="#about">Learn More →</a>
     </div>
 
-    <div class="main-img">
-        <img src="main.webp" alt="Painting work by ARZ Painting">
+    <div class="service-card">
+      <img src="doors-paint.jpg" alt="Doors Painting" />
+      <h3>Doors Painting</h3>
+      <p>Refresh and protect your doors...</p>
+      <a href="#about">Learn More →</a>
     </div>
 
-    <div class="text">
-        <ul>
-            <li>We have the best workers</li>
-            <li><img src="work.jpg"/></li>
-        </ul>
+    <div class="service-card">
+      <img src="work.jpg" alt="Interior Painting" />
+      <h3>Interior Painting</h3>
+      <p>Give your room a great look…</p>
+      <a href="#about">Learn More →</a>
     </div>
 
+    <div class="service-card">
+      <img src="carage.jpg" alt="Exterior Painting" />
+      <h3>Exterior Painting</h3>
+      <p>Give your property a…</p>
+      <a href="#about">Learn More →</a>
+    </div>
+  </section>
 
-    <div class="news">
-        <img src="main.jpg" alt="Painting example">
-        <h3>Who are we?</h3>
-        <h4>We provide high-quality painting for houses—inside and outside—at the best prices.</h4>
-      </div>
+  <!-- About Us -->
+  <section class="about-us" id="about">
+    <h1>Who Are We?</h1>
+    <p>
+      With over 15 years of experience, we offer top-quality interior and exterior painting at the best price. Whether it’s one room or the whole house, we deliver expert advice, professional finishes, and long-lasting results using premium materials.
+    </p>
+    <p>
+      Refresh and protect your doors with our expert painting services. We provide smooth, clean finishes that enhance your space and stand the test of time.
+    </p>
+  </section>
 
-    <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navbar = document.querySelector('.navbar');
+  <!-- Footer -->
+  <footer>
+    <div style="max-width: 1200px; margin: auto;">
+      <p>&copy; 2025 ARZ Painting. All rights reserved.</p>
+      <p>
+        Melbourne, VIC | Phone: <a href="tel:0459249457">0459 249 457</a> | 
+        Email: <a href="mailto:majedzarkash@gmail.com">majedzarkash@gmail.com</a>
+      </p>
+      <p>Website designed with love by Majed Zarkash.</p>
+    </div>
+  </footer>
 
-        menuToggle.addEventListener('click', () => {
-            navbar.classList.toggle('open');
-        });
-    </script>
+  <!-- JavaScript -->
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navbar = document.querySelector('.navbar');
+
+    menuToggle.addEventListener('click', () => {
+      navbar.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
